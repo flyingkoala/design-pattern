@@ -3,6 +3,7 @@ package com.wkang.designpattern;
 import com.wkang.designpattern.factory.simple.Product;
 import com.wkang.designpattern.factory.simple.ProductA;
 import com.wkang.designpattern.factory.simple.ProductFactory;
+import com.wkang.designpattern.factory.standard.*;
 import com.wkang.designpattern.prototype.Movie;
 import com.wkang.designpattern.prototype.Thing;
 import com.wkang.designpattern.single.LazySingleton;
@@ -69,6 +70,16 @@ class DesignPatternApplicationTests {
         Product b = ProductFactory.createProduct("B");
         b.getColor();
         b.getSize();
+
+        //工厂方法
+        System.out.println("****【简单工厂】****");
+        AbstractHumanFactory humanFactory = new HumanFactory();
+        Human human= humanFactory.createHuamn(YellowHuman.class);
+        human.getColor();
+        human.talk();
+        Human human2= humanFactory.createHuamn(BlackHuman.class);
+        human2.getColor();
+        human2.talk();
 
 
     }
