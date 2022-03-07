@@ -72,7 +72,7 @@ class DesignPatternApplicationTests {
         b.getSize();
 
         //工厂方法
-        System.out.println("****【简单工厂】****");
+        System.out.println("****【工厂方法】****");
         AbstractHumanFactory humanFactory = new HumanFactory();
         Human human= humanFactory.createHuamn(YellowHuman.class);
         human.getColor();
