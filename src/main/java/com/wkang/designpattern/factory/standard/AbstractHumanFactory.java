@@ -9,5 +9,5 @@ package com.wkang.designpattern.factory.standard;
 public abstract class AbstractHumanFactory {
     //采用泛型
     //要求输入参数必须是class 且必须是Human的实现类
-    public abstract <T extends Human> T createHuamn(Class<T> c);
+    public abstract <T extends Human> T createHuman(Class<T> c);
 }

@@ -1,5 +1,7 @@
 package com.wkang.designpattern;
 
+import com.wkang.designpattern.factory.abstrac.MaleFactory;
+import com.wkang.designpattern.factory.abstrac.MaleYellowHuman;
 import com.wkang.designpattern.factory.simple.Product;
 import com.wkang.designpattern.factory.simple.ProductA;
 import com.wkang.designpattern.factory.simple.ProductFactory;
@@ -74,13 +76,20 @@ class DesignPatternApplicationTests {
         //工厂方法
         System.out.println("****【工厂方法】****");
         AbstractHumanFactory humanFactory = new HumanFactory();
-        Human human= humanFactory.createHuamn(YellowHuman.class);
+        Human human= humanFactory.createHuman(YellowHuman.class);
         human.getColor();
         human.talk();
-        Human human2= humanFactory.createHuamn(BlackHuman.class);
+        Human human2= humanFactory.createHuman(BlackHuman.class);
         human2.getColor();
         human2.talk();
 
+        //抽象工厂
+        System.out.println("****【抽象工厂】****");
+        com.wkang.designpattern.factory.abstrac.HumanFactory maleFactory = new MaleFactory();
+        com.wkang.designpattern.factory.abstrac.Human human1 = maleFactory.createYellowHuman();
+        human1.getColor();
+        human1.talk();
+        human1.getSex();
 
     }
 

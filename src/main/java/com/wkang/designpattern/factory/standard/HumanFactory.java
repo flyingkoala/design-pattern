@@ -7,7 +7,7 @@ package com.wkang.designpattern.factory.standard;
  */
 public class HumanFactory extends AbstractHumanFactory {
     @Override
-    public <T extends Human> T createHuamn(Class<T> c) {
+    public <T extends Human> T createHuman(Class<T> c) {
         Human human=null;
         try {
             //生成一个人类
@@ -20,3 +20,4 @@ public class HumanFactory extends AbstractHumanFactory {
         return (T) human;
     }
 }
+
